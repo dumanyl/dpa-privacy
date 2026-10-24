@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacidade — DPA (Daqui Para Ali)</title>
+  <style>
+    :root { color-scheme: light dark; --fg: #1a1a1a; --muted: #555; --bg: #fafafa; --card: #fff; --accent: #0b6e4f; }
+    @media (prefers-color-scheme: dark) {
+      :root { --fg: #f2f2f2; --muted: #aaa; --bg: #121212; --card: #1c1c1c; --accent: #3dcf9a; }
+    }
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background: var(--bg); color: var(--fg); line-height: 1.55; }
+    header { padding: 1.25rem 1rem; border-bottom: 1px solid #0002; display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; justify-content: space-between; }
+    header h1 { font-size: 1.15rem; margin: 0; }
+    nav button { border: 1px solid var(--accent); background: transparent; color: var(--accent); border-radius: 999px; padding: .35rem .9rem; cursor: pointer; font: inherit; }
+    nav button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+    main { max-width: 42rem; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
+    article { background: var(--card); padding: 1.25rem 1.1rem; border-radius: 12px; box-shadow: 0 1px 3px #0001; }
+    article[hidden] { display: none; }
+    h2 { font-size: 1.05rem; margin-top: 1.6rem; }
+    table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+    th, td { border: 1px solid #0002; padding: .45rem .5rem; text-align: left; vertical-align: top; }
+    .meta { color: var(--muted); font-size: .9rem; }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>DPA — Privacidade / Privacy</h1>
+    <nav aria-label="Language">
+      <button type="button" id="btn-pt" aria-pressed="true">Português</button>
+      <button type="button" id="btn-en" aria-pressed="false">English</button>
+    </nav>
+  </header>
+  <main>
+    <article id="pt" lang="pt">
+      <p class="meta">Última actualização: 24 de Outubro de 2026 · <code>com.daquiparaali.app</code> · Contacto: <a href="mailto:ldumany@gmail.com">ldumany@gmail.com</a></p>
+      <p>Esta política explica que dados o DPA usa, para quê, e como os pode controlar. O DPA é uma aplicação gratuita de planeamento de viagens de chapa em Maputo. <strong>Não cria conta</strong>: as suas viagens ficam neste telefone.</p>
+      <h2>1. Resumo</h2>
+      <table>
+        <thead><tr><th>O quê</th><th>Onde</th><th>Enviado para fora?</th></tr></thead>
+        <tbody>
+          <tr><td>Localização (primeiro plano)</td><td>Telefone; só se usar Perto</td><td>Sim — servidor, paragens próximas</td></tr>
+          <tr><td>Texto de pesquisa / origem e destino</td><td>Telefone e servidor</td><td>Sim — rotas e pesquisa</td></tr>
+          <tr><td>Viagens guardadas e histórico local</td><td>Só no telefone</td><td>Não</td></tr>
+          <tr><td>Relatórios de erros (opcional)</td><td>Firebase Crashlytics</td><td>Sim — se activo no Perfil</td></tr>
+          <tr><td>Relatórios de problemas</td><td>Servidor</td><td>Sim — o texto que enviar</td></tr>
+        </tbody>
+      </table>
+      <p>Não vendemos dados. Não temos anúncios. Não usamos o identificador de publicidade.</p>
+      <h2>2. Localização</h2>
+      <p>Pedimos localização <strong>apenas em primeiro plano</strong>. Em <strong>Perto</strong>, com autorização, enviamos latitude/longitude ao servidor (<code>dpa-backend.fly.dev</code>). Sem permissão, o planeamento por nomes continua. Em viagem, a posição no mapa é a do telefone, não da viatura. Registos de pedidos de rota no servidor são <strong>apagados automaticamente ao fim de cerca de 30 dias</strong>.</p>
+      <h2>3. Pesquisas e rotas</h2>
+      <p>O texto que escreve é enviado por HTTPS ao servidor. Pode ficar em registos técnicos, também com retenção de cerca de 30 dias.</p>
+      <h2>4. Dados só no telefone</h2>
+      <p>Viagens guardadas, viagem activa, histórico recente, preferências e mapa offline. A cópia de segurança do Android, quando cifrada, pode incluir apenas as viagens guardadas.</p>
+      <h2>5. Relatórios de erros</h2>
+      <p>Se mantiver activos os relatórios de erros no Perfil, usamos o Firebase Crashlytics para dados técnicos de falhas (versão, Android, modelo, identificadores de instalação). Não acrescentamos pesquisas, localização ou dados das viagens. Pode desactivar no Perfil.</p>
+      <h2>6. Relatórios e partilha</h2>
+      <p>Reportar um problema envia o texto ao nosso servidor. Partilhar uma viagem usa o menu do Android e fica sob as regras da app de destino.</p>
+      <h2>7. Pagamentos (M-Pesa)</h2>
+      <p>Quando os pagamentos estiverem activos, actualizaremos esta política. Até lá pode haver fluxos de teste sem cobrança.</p>
+      <h2>8. Mapas e alojamento</h2>
+      <p>Mapas via terceiros (ex. OpenFreeMap). Servidor na Fly.io. Comunicação por HTTPS.</p>
+      <h2>9. Como apagar ou limitar</h2>
+      <ol>
+        <li>Retirar permissão de localização no Android.</li>
+        <li>Desactivar relatórios de erros no Perfil.</li>
+        <li>Remover viagens guardadas / mapa offline na app.</li>
+        <li>Android → Aplicações → DPA → Limpar armazenamento / desinstalar.</li>
+        <li>Escrever para <a href="mailto:ldumany@gmail.com">ldumany@gmail.com</a>.</li>
+      </ol>
+      <h2>10. Crianças</h2>
+      <p>O DPA não se destina a menores de 13 anos.</p>
+      <h2>11. Alterações</h2>
+      <p>A data no topo muda quando actualizarmos esta página.</p>
+      <h2>12. Contacto</h2>
+      <p>Dumany Lombe — Daqui Para Ali · <a href="mailto:ldumany@gmail.com">ldumany@gmail.com</a></p>
+    </article>
+
+    <article id="en" lang="en" hidden>
+      <p class="meta">Last updated: 24 October 2026 · <code>com.daquiparaali.app</code> · Contact: <a href="mailto:ldumany@gmail.com">ldumany@gmail.com</a></p>
+      <p>This policy explains what data DPA uses, why, and how you can control it. DPA is a free app for planning chapa (minibus) trips in Maputo. <strong>There is no account</strong> — your trips stay on this phone.</p>
+      <h2>1. Summary</h2>
+      <table>
+        <thead><tr><th>What</th><th>Where</th><th>Sent off device?</th></tr></thead>
+        <tbody>
+          <tr><td>Location (foreground)</td><td>Phone; only if you use Perto</td><td>Yes — server, nearby stops</td></tr>
+          <tr><td>Search / origin &amp; destination text</td><td>Phone and server</td><td>Yes — routes and search</td></tr>
+          <tr><td>Saved trips &amp; local history</td><td>Phone only</td><td>No</td></tr>
+          <tr><td>Crash reports (optional)</td><td>Firebase Crashlytics</td><td>Yes — if enabled in Profile</td></tr>
+          <tr><td>Problem reports</td><td>Server</td><td>Yes — text you send</td></tr>
+        </tbody>
+      </table>
+      <p>We do not sell data. We do not show ads. We do not use an advertising ID.</p>
+      <h2>2. Location</h2>
+      <p>We ask for location <strong>only in the foreground</strong>. For <strong>Perto</strong>, with permission, we send lat/lon to <code>dpa-backend.fly.dev</code>. Without permission, place-name planning still works. On a trip, the map position is your phone’s, not the vehicle’s. Route-request logs are <strong>deleted automatically after about 30 days</strong>.</p>
+      <h2>3. Search and trip planning</h2>
+      <p>Text you type is sent over HTTPS to our server and may sit in technical logs for about 30 days.</p>
+      <h2>4. Data that stays on the phone</h2>
+      <p>Saved trips, active journey, recent history, preferences, and offline map. Encrypted Android backup may include saved trips only.</p>
+      <h2>5. Crash reports</h2>
+      <p>If error reporting stays on in Profile, Firebase Crashlytics receives technical crash data (version, Android, model, installation IDs). We do not attach searches, location, or trip contents. You can turn this off in Profile.</p>
+      <h2>6. Problem reports and sharing</h2>
+      <p>Reporting a problem sends your text to our server. Sharing a trip uses Android’s share sheet under the destination app’s rules.</p>
+      <h2>7. Payments (M-Pesa)</h2>
+      <p>When fare payments go live, we will update this policy. Until then, test/simulated flows may not charge.</p>
+      <h2>8. Maps and hosting</h2>
+      <p>Maps via third parties (e.g. OpenFreeMap). Server on Fly.io. HTTPS.</p>
+      <h2>9. How to delete or limit data</h2>
+      <ol>
+        <li>Revoke location permission in Android.</li>
+        <li>Turn off crash reporting in Profile.</li>
+        <li>Remove saved trips / offline map in the app.</li>
+        <li>Android → Apps → DPA → Clear storage / uninstall.</li>
+        <li>Email <a href="mailto:ldumany@gmail.com">ldumany@gmail.com</a>.</li>
+      </ol>
+      <h2>10. Children</h2>
+      <p>DPA is not directed at children under 13.</p>
+      <h2>11. Changes</h2>
+      <p>The date at the top changes when we update this page.</p>
+      <h2>12. Contact</h2>
+      <p>Dumany Lombe — Daqui Para Ali · <a href="mailto:ldumany@gmail.com">ldumany@gmail.com</a></p>
+    </article>
+  </main>
+  <script>
+    const pt = document.getElementById('pt');
+    const en = document.getElementById('en');
+    const btnPt = document.getElementById('btn-pt');
+    const btnEn = document.getElementById('btn-en');
+    function show(lang) {
+      const isPt = lang === 'pt';
+      pt.hidden = !isPt; en.hidden = isPt;
+      btnPt.setAttribute('aria-pressed', String(isPt));
+      btnEn.setAttribute('aria-pressed', String(!isPt));
+      document.documentElement.lang = lang;
+    }
+    btnPt.onclick = () => show('pt');
+    btnEn.onclick = () => show('en');
+    if (location.hash === '#en' || (navigator.language || '').toLowerCase().startsWith('en')) show('en');
+  </script>
+</body>
+</html>
